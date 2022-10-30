@@ -12,10 +12,10 @@ for(const ingredient of ingredients) {
 const itemRef = document.createElement('li');
 itemRef.textContent = ingredient;
 itemRef.classList.add('item');
-ingridientsListRef.appendChild(itemRef);
+ingridientsListRef.append(itemRef);
 }
 
-console.log(ingridientsListRef);
+// console.log(ingridientsListRef);
 
 // const ingredientsListRef = document.querySelector('#ingredients')
 
