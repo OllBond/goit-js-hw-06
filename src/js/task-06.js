@@ -1,9 +1,18 @@
-const inputRef = document.querySelector(['data-length="6"']);
-inputRef.addEventListener('blur', onInputSymbols);
+const inputRef = document.querySelector("#validation-input");
 
-// function onInputSymbols (event) {
-// if (inputRef === event.currentTarget.value) {
-// повісити клас на інпут? inputRef.classList.add('valid'); 
-// }
-// inputRef.classList.add('invalid'); 
-// } 
+inputRef.addEventListener("blur", onBlur);
+
+function onBlur(event) {
+    const input = event.currentTarget;
+    const inputLength = Number(input.dataset.length);
+
+    if (input.value.length === inputLength) {
+      input.classList.remove("invalid");
+      input.classList.add("valid");
+      
+    } 
+    else {
+      input.classList.remove("valid");
+      input.classList.add("invalid");
+    }
+  }
