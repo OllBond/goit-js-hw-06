@@ -1,7 +1,13 @@
 const divRef = document.querySelector('#controls');
-const inputRef = document.querySelector(); 
+const divBoxesREf = document.querySelector('#boxes');
+const inputRef = document.querySelector('input');
+inputRef.value;
+const buttonCreateREf = document.querySelector('[data-create]'); 
+const buttonDestroyREf = document.querySelector('[data-destroy]');
 
 function createBoxes(amount) {
+
+  const divCreateREf = document.createElement('div');
 
 }
 
