@@ -5,11 +5,24 @@ inputRef.value;
 const buttonCreateREf = document.querySelector('[data-create]'); 
 const buttonDestroyREf = document.querySelector('[data-destroy]');
 
+
 function createBoxes(amount) {
 
-  const divCreateREf = document.createElement('div');
+let divNumber = 30;
 
+  for ( let i = 0; i < inputRef.value; i+=1 ) {
+
+    const divCreateNewRef = document.createElement('div');
+    divBoxesREf.append(divCreateNewRef);
+
+    divCreateNewRef.style.width = `${divNumber}px`;
+    divCreateNewRef.style.height = `${divNumber}px`;
+    
+    divNumber += 10;
+  }  
 }
+buttonCreateREf.addEventListener('click', createBoxes);
+
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
