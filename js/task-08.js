@@ -5,8 +5,8 @@ const onFormSubmit = (event) => {
 
     const formReference = event.currentTarget.elements;
 
-    const mail = formReference.email.value;
-    const password = formReference.password.value;
+    const mail = formReference.email.value.trim();
+    const password = formReference.password.value.trim();
     console.log(mail, password);
     
     if(mail === '' || password === '') {
