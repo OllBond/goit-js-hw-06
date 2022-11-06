@@ -8,12 +8,26 @@ const ingredients = [
 ];
 
 const ingridientsListRef = document.querySelector('#ingredients');
-for(const ingredient of ingredients) { 
-const itemRef = document.createElement('li');
+
+const elementIngridientsRef = ingredients.map(ingredient => {
+
+  const itemRef = document.createElement('li');
 itemRef.textContent = ingredient;
 itemRef.classList.add('item');
-ingridientsListRef.append(itemRef);
-}
+return itemRef;
+
+});
+
+// console.log(elementIngridientsRef);
+ingridientsListRef.append(...elementIngridientsRef);
+
+
+// for(const ingredient of ingredients) { 
+// const itemRef = document.createElement('li');
+// itemRef.textContent = ingredient;
+// itemRef.classList.add('item');
+// ingridientsListRef.append(itemRef);
+// }
 
 
 
