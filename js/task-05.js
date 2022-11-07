@@ -13,3 +13,12 @@ if (event.currentTarget.value === '') {
 } 
 }
 
+// 2 спосіб
+// inputRef.addEventListener('input', onInputChange);
+
+// function onInputChange (event) {
+
+// const value = event.currentTarget.value.trim();
+// spanRef.textContent = value ? value : 'Anonymous';
+
+// }
